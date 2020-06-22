@@ -125,6 +125,13 @@ L.Ellipse = L.Path.extend({
         return this._latlng;
     },
 
+    toGeoJSON: function (precision) {
+        return L.Util.getFeature(this, {
+            type: 'Point',
+            coordinates: L.Util.latLngToCoords(this.getLatLng(), precision)
+        });
+    },
+
     setStyle: L.Path.prototype.setStyle,
 
     _project: function () {
