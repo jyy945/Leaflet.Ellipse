@@ -131,7 +131,6 @@ L.Ellipse = L.Path.extend({
             coordinates: L.Util.latLngToCoords(this.getLatLng(), precision)
         });
     },
-
     setStyle: L.Path.prototype.setStyle,
 
     _project: function () {
